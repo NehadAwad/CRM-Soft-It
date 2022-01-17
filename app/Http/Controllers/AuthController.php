@@ -47,5 +47,9 @@ class AuthController extends Controller
         return view('admin.userManagement.addUser');
     }
 
+    public function storeUser(Request $request){
+
+    }
+
 
 }

@@ -27,5 +27,6 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
 
     Route::get('/home', [AuthController::class, 'homePage'])->name('admin.dashboard');
     Route::get('add-user-page', [AuthController::class, 'addUserPage'])->name('create.user');
+    Route::post('/store-user', [AuthController::class, 'storeUser'])->name('store.user');
 });
 
