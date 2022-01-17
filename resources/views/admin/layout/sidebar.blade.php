@@ -46,7 +46,7 @@
                         {{--                        @else--}}
                         {{--                        class="treeview-item"--}}
                         {{--                        @endif--}}
-                        href=""><i class="icon fa fa-users"></i>Add User</a></li>
+                        href="{{ route('create.user') }}"><i class="icon fa fa-users"></i>Add User</a></li>
             </ul>
         </li>
         {{--        @endif--}}

@@ -42,4 +42,10 @@ class AuthController extends Controller
         return view('admin.dashboard');
     }
 
+    //create user page
+    public function addUserPage(){
+        return view('admin.userManagement.addUser');
+    }
+
+
 }
