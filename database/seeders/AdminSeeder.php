@@ -22,11 +22,11 @@ class AdminSeeder extends Seeder
             'password' => Hash::make('superadmin@'),
         ]);
 
-        DB::table('users')->insert( [
-            'name' => 'User01',                    // USER
-            'email' => 'user01@gmail.com',
-            'type' => 'user',
-            'password' => Hash::make('user01@'),
-        ]);
+//        DB::table('users')->insert( [
+//            'name' => 'User01',                    // USER
+//            'email' => 'user01@gmail.com',
+//            'type' => 'user',
+//            'password' => Hash::make('user01@'),
+//        ]);
     }
 }

@@ -69,7 +69,15 @@
                                     <input class="form-control" name="user_email" type="text" placeholder="">
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1"><strong>Password</strong></label>
+                                    <input class="form-control" name="password" type="password" placeholder="">
+                                </div>
+                            </div>
                         </div>
 
                         <div class="tile-footer">

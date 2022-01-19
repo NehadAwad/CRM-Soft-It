@@ -4,11 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\AdminRequest;
 use App\Http\Requests\AdminSignInRequest;
+use App\Interfaces\UserInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+    protected $userRepo;
+    public function __construct(UserInterface $userInterface)
+    {
+        $this->userRepo = $userInterface;
+    }
+
     //view sign in page
     public function signInPage(){
         if (Auth::user() != null){
@@ -47,8 +54,10 @@ class AuthController extends Controller
         return view('admin.userManagement.addUser');
     }
 
+    //storing user data
     public function storeUser(Request $request){
-
+        $this->userRepo->createUser($request);
+        return redirect()->back();
     }
 
 
