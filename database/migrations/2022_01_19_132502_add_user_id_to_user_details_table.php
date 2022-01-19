@@ -14,7 +14,7 @@ class AddUserIdToUserDetailsTable extends Migration
     public function up()
     {
         Schema::table('user_details', function (Blueprint $table) {
-            $table->integer('userId');
+            $table->string('userId')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddUserIdToUserDetailsTable extends Migration
     public function down()
     {
         Schema::table('user_details', function (Blueprint $table) {
-            $table->dropColumn('userId');
+            $table->dropColumn('userId')->nullable();
         });
     }
 }

@@ -30,7 +30,7 @@ class UserRepository implements UserInterface
 
         }
 
-        $user =User::create([
+        $user = User::create([
             'name' => $data['user_name'],
             'email' => $data['user_email'],
             'phone' => $data['mobile_number'],
@@ -38,6 +38,7 @@ class UserRepository implements UserInterface
         ]);
 
         UserDetails::create([
+            'userId' => $user->id,
             'voter_id' => $data['voter_id'],
             'installment' => $data['installment'],
             'address' => $data['user_address'],
